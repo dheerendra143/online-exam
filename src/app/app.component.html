@@ -1,0 +1,39 @@
+<html>
+
+<head></head>
+
+<body class="online-exam">
+  <section class="header-area">
+   <h1> Online Exam</h1>
+  </section>
+  <main class="main-area">
+    <section class="qwuestion-answer-area-wp">
+      <section>
+        <section *ngFor="let list of question_list"  [ngClass]="list.isSelected" class="qwuestion-answer-area ">
+          <div class="question-area">
+            <span>{{question_list.indexOf(list) + 1}}. </span>
+            {{list.question}}
+          </div>
+          <div class="answer">
+            
+            <select (change)="saveSelectedOption(list, $event)" class="dropdown-list">
+              <option value="" selected>Select Answer</option>
+              <option *ngFor="let option of list.options" [ngValue]="option">{{option}}</option>
+            </select>
+          </div>
+          <span class="error-msg" *ngIf="list.isSelected == 'error'">Please Select Your Answer</span>
+        </section>
+      </section>
+      <section class="button-area">
+      <button class="button primary" (click)="saveAllAnswer()">Submit</button>
+      <button class="button secondary" (click)="clearAllAnswer()">Clear</button>
+    </section>
+    </section>
+    <section class="chart-area" *ngIf="graphDisplayStatus">
+      <fusioncharts [chartConfig]=chartConfig [dataSource]=dataSource>
+      </fusioncharts>
+    </section>
+  </main>
+</body>
+
+</html>

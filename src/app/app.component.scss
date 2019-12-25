@@ -1,0 +1,126 @@
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+.online-exam {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0;
+
+  .selected {
+    border: 2px solid green !important;
+  }
+
+  .error {
+    &-msg {
+      color: red;
+    }
+  }
+
+  .main-area {
+    display: block;
+    @include lg {
+      display: flex;
+    }
+    .qwuestion-answer-area-wp {
+      width: 100%;
+      @include lg {
+        width: 60%;
+      }
+    }
+    .qwuestion-answer-area {
+      border: 2px solid lightgray;
+      margin-bottom: 20px;
+      @include lg {
+        margin-bottom: 40px;
+      }
+    }
+    .chart-area {
+      width: 100%;
+      border: 1px solid grey;
+      margin-left: 0;
+      margin-top: 20px;
+      @include lg {
+        width: 60%;
+        margin-left: 20px;
+        margin-top: 0;
+      }
+    }
+    .question-area {
+      background-color: lightgray;
+    }
+  }
+  .button-area {
+    display: block;
+    @include md {
+      display: flex;
+    }
+    .button {
+      width: 100%;
+      color: white;
+      font-weight: 400;
+      font-size: 20px;
+      padding: 10px;
+
+      &.primary {
+        background-color: green;
+        margin-right: 0;
+        margin-bottom: 10px;
+        @include md {
+          margin-right: 10px;
+          margin-bottom: 0;
+        }
+      }
+      &.secondary {
+        background-color: lightgray;
+      }
+    }
+  }
+
+  .dropdown-list {
+    width: auto;
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid;
+    background: transparent;
+    margin: 9px;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,37 @@
+[
+    {
+      "question_id" : 10001,
+      "question" : "India team caption name", 
+      "options" : ["Virat", "dhoni", "Sachin", "none"],
+      "answer" : "Virat",
+      "isSelected" : ""
+    },
+    {
+      "question_id" : 10002,
+      "question" : "what is the color of Test Cricket Ball Earlier", 
+      "options" : ["Black", "white", "red", "Pink"],
+      "answer" : "White",
+      "isSelected" : ""
+    },
+    {
+      "question_id" : 10003,
+      "question" : "Highest Indivisual Score in ODI by Batsman", 
+      "options" : ["Ricky Ponting", "Sachin", "Virat Kohli", "Rohit Sharma"],
+      "answer" : "Rohit Sharma",
+      "isSelected" : ""
+    },
+    {
+      "question_id" : 10004,
+      "question" : "India team caption name", 
+      "options" : ["Virat", "dhoni", "Sachin", "none"],
+      "answer": "Virat",
+      "isSelected" : ""
+    },
+    {
+      "question_id" : 10005,
+      "question" : "What is Highest Score in ODI by batsman", 
+      "options" : ["201", "183", "264", "205"],
+      "answer": "264",
+      "isSelected" : ""
+    }
+  ]
